@@ -1,9 +1,10 @@
 package config_test
 
 import (
-	utilities "go.amplifyedge.org/sys-share-v2/sys-core/service/config"
 	"github.com/stretchr/testify/require"
+	utilities "go.amplifyedge.org/sys-share-v2/sys-core/service/config"
 	"testing"
+	"time"
 )
 
 func TestGenRandomByteSlice(t *testing.T) {
@@ -12,12 +13,12 @@ func TestGenRandomByteSlice(t *testing.T) {
 	t.Logf("Generated random byte: %s", string(randomBytes))
 }
 
-func TestLookupFile(t *testing.T) {
-	fpath, err := utilities.LookupFile("./testdata", "test")
-	require.NoError(t, err)
-	t.Logf("Filepath: %s", fpath)
-
-	fpath, err = utilities.LookupFile("./testdata", "test2")
-	require.NoError(t, err)
-	t.Logf("Filepath: %s", fpath)
+func TestConvertTimestamps(t *testing.T) {
+	nanos := int64(1617409531716140800)
+	u := time.Unix(0, nanos).UTC()
+	require.NotEqual(t, "", u.String())
+	t.Log(u.String())
+	ts := utilities.UnixToUtcTS(nanos)
+	t.Log(ts.String())
+	require.NotEqual(t, nil, ts)
 }

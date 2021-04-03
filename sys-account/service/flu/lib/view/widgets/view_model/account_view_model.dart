@@ -175,8 +175,9 @@ class AccountViewModel extends BaseModel {
     if (_userEmail.isEmpty) {
       return false;
     }
-    return _userEmail.contains(RegExp(
-        r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+"));
+    return true;
+    // return _userEmail.contains(RegExp(
+    //     r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9-]+\.[a-zA-Z]+"));
   }
 
   bool _validatePassword() {

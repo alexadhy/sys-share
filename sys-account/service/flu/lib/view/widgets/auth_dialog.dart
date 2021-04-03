@@ -87,7 +87,8 @@ class AuthDialogState extends State<AuthDialog> {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: TextField(
-                        autofillHints: [AutofillHints.username],
+                        autofillHints:
+                            model.isEmailEnabled ? [AutofillHints.email] : null,
                         focusNode: _emailFocusNode,
                         keyboardType: TextInputType.emailAddress,
                         textInputAction: TextInputAction.next,
@@ -147,7 +148,9 @@ class AuthDialogState extends State<AuthDialog> {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: TextField(
-                        autofillHints: [AutofillHints.password],
+                        autofillHints: model.isPasswordEnabled
+                            ? [AutofillHints.password]
+                            : null,
                         focusNode: _passwordFocusNode,
                         keyboardType: TextInputType.text,
                         textInputAction: TextInputAction.done,
