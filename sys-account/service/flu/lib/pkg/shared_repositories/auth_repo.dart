@@ -309,7 +309,7 @@ Map<int, rpc.UserRoles> isAdmin() {
 }
 
 List<String> getSubscribedOrgs(rpc.Account account) {
-  var listSubscribedOrgs = List<String>.empty();
+  var listSubscribedOrgs = List<String>.empty(growable: true);
   account.roles.forEach((role) {
     if (role.orgId.isNotEmpty) {
       listSubscribedOrgs.add(role.orgId);

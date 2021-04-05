@@ -43,12 +43,12 @@ class AuthNavViewModel extends BaseModel {
   AuthNavViewModel() {
     isUserLoggedIn();
     if (_isLoggedIn) {
-      print("USER IS LOGGED IN!");
+      // print("USER IS LOGGED IN!");
       _fetchAccountId();
       verifySuperuser();
       verifyAdmin();
     } else {
-      print("FOR SOME REASON USER IS NOT LOGGED IN");
+      // print("FOR SOME REASON USER IS NOT LOGGED IN");
     }
   }
 
@@ -254,6 +254,7 @@ class AuthNavViewModel extends BaseModel {
     verifyAdmin();
     if (!_isSuperuser) {
       final orgIds = authRepo.getSubscribedOrgs(_currentAccount);
+      print("Org IDS: $orgIds");
       await _fetchOrgs({"id": orgIds}, perPageEntries, "in");
     } else {
       await _fetchOrgs(Map<String, dynamic>(), perPageEntries, "like");
