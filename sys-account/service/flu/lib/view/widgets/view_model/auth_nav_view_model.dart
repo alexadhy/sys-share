@@ -214,14 +214,14 @@ class AuthNavViewModel extends BaseModel {
     _setSuperUser(false);
     _setAdmin(false);
     _setCurrentAccount(rpc.Account());
-    // notifyListeners();
+    notifyListeners();
   }
 
   void logOut() {
     authRepo.logOut();
     _resetAuth();
     _resetNav();
-    // notifyListeners();
+    notifyListeners();
   }
 
   Future<void> _fetchOrgs(
