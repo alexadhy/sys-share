@@ -224,22 +224,22 @@ class AuthNavViewModel extends BaseModel {
     notifyListeners();
   }
 
-  Future<void> _fetchOrgs(
-      Map<String, dynamic> filter, int perPageEntries, String matcher) async {
-    await orgRepo.OrgProjRepo.listUserOrgs(
-      currentPageId: _currentPageId,
-      orderBy: _orderBy,
-      isDescending: _isDescending,
-      perPageEntries: perPageEntries,
-      filters: filter,
-      matcher: matcher,
-    ).then((resp) {
-      setCurrentPageId(Int64.parseInt(resp.nextPageId));
-      _setSubscribedOrgs(resp.orgs);
-    }).catchError((e) {
-      setErrMsg(e.toString());
-    });
-  }
+  // Future<void> _fetchOrgs(
+  //     Map<String, dynamic> filter, int perPageEntries, String matcher) async {
+  //   await orgRepo.OrgProjRepo.listUserOrgs(
+  //     currentPageId: _currentPageId,
+  //     orderBy: _orderBy,
+  //     isDescending: _isDescending,
+  //     perPageEntries: perPageEntries,
+  //     filters: filter,
+  //     matcher: matcher,
+  //   ).then((resp) {
+  //     setCurrentPageId(Int64.parseInt(resp.nextPageId));
+  //     _setSubscribedOrgs(resp.orgs);
+  //   }).catchError((e) {
+  //     setErrMsg(e.toString());
+  //   });
+  // }
 
   Future<void> getSubscribedOrgs({
     perPageEntries = 10,
@@ -252,13 +252,12 @@ class AuthNavViewModel extends BaseModel {
     await _fetchCurrentAccount();
     verifySuperuser();
     verifyAdmin();
-    if (!_isSuperuser) {
-      final orgIds = authRepo.getSubscribedOrgs(_currentAccount);
-      print("Org IDS: $orgIds");
-      await _fetchOrgs({"id": orgIds}, perPageEntries, "in");
-    } else {
-      await _fetchOrgs(Map<String, dynamic>(), perPageEntries, "like");
-    }
+    // if (!_isSuperuser) {
+    //   // final orgIds = authRepo.getSubscribedOrgs(_currentAccount);
+    //   // await _fetchOrgs({"id": orgIds}, perPageEntries, "in");
+    // } else {
+    //   // await _fetchOrgs(Map<String, dynamic>(), perPageEntries, "like");
+    // }
     if (_isLoggedIn && _isSuperuser && superAdminTabs != null) {
       superAdminTabs.forEach((key, value) {
         _widgetKeys.add(key);
@@ -272,23 +271,23 @@ class AuthNavViewModel extends BaseModel {
       });
     }
 
-    _subscribedOrgs.forEach((org) {
-      final _namedRoute = '/disco/subbed/' + org.id;
-      _widgetKeys.add(_namedRoute);
-      _widgetList.add(TabItem(
-        icon: ClipOval(
-          child: Image.memory(
-            Uint8List.fromList(org.logo),
-            width: 30,
-            height: 30,
-            fit: BoxFit.cover,
-          ),
-        ),
-        title: Text(org.name, style: TextStyle(fontSize: 12)),
-        onTap: () {
-          Modular.to.pushNamed(_namedRoute);
-        },
-      ));
-    });
+    // _subscribedOrgs.forEach((org) {
+    //   final _namedRoute = '/disco/subbed/' + org.id;
+    //   _widgetKeys.add(_namedRoute);
+    //   _widgetList.add(TabItem(
+    //     icon: ClipOval(
+    //       child: Image.memory(
+    //         Uint8List.fromList(org.logo),
+    //         width: 30,
+    //         height: 30,
+    //         fit: BoxFit.cover,
+    //       ),
+    //     ),
+    //     title: Text(org.name, style: TextStyle(fontSize: 12)),
+    //     onTap: () {
+    //       Modular.to.pushNamed(_namedRoute);
+    //     },
+    //   ));
+    // });
   }
 }
