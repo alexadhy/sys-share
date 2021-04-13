@@ -1,0 +1,99 @@
+{
+  "@@last_modified": "2021-01-24T23:30:39.478538",
+  "email": "Correo electrónico",
+  "@email": {
+    "description": "Email",
+    "type": "text",
+    "placeholders": {}
+  },
+  "emailHint": "Tu correo electrónico",
+  "@emailHint": {
+    "description": "Your Email",
+    "type": "text",
+    "placeholders": {}
+  },
+  "password": "Contraseña",
+  "@password": {
+    "description": "Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordHint": "Tu contraseña",
+  "@passwordHint": {
+    "description": "Your Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "verificationToken": "Token de verificación",
+  "@verificationToken": {
+    "description": "Verification Token",
+    "type": "text",
+    "placeholders": {}
+  },
+  "verifyAccount": "Verificar Cuenta",
+  "@verifyAccount": {
+    "description": "Verifiy Account",
+    "type": "text",
+    "placeholders": {}
+  },
+  "submitNewPassword": "Enviar nueva contraseña",
+  "@submitNewPassword": {
+    "description": "Submit New Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "byProceeding": "Al continuar, acepta nuestros Términos de uso y confirma que ha leído nuestra Política de privacidad.",
+  "@byProceeding": {
+    "description": "By Proceeding",
+    "type": "text",
+    "placeholders": {}
+  },
+  "signUp": "Inscribirse",
+  "@signUp": {
+    "description": "Sign Up",
+    "type": "text",
+    "placeholders": {}
+  },
+  "signIn": "Registrarse",
+  "@signIn": {
+    "description": "Sign In",
+    "type": "text",
+    "placeholders": {}
+  },
+  "signOut": "Desconectar",
+  "@signOut": {
+    "description": "Sign Out",
+    "type": "text",
+    "placeholders": {}
+  },
+  "forgotPassword": "Has olvidado tu contraseña",
+  "@forgotPassword": {
+    "description": "Forgot Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "resetPassword": "Restablecer la contraseña",
+  "@resetPassword": {
+    "description": "Reset Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "invalidEmail": "Email inválido",
+  "@invalidEmail": {
+    "description": "Invalid Email",
+    "type": "text",
+    "placeholders": {}
+  },
+  "invalidPassword": "Contraseña invalida",
+  "@invalidPassword": {
+    "description": "Invalid Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "invalidVerificationToken": "Token de verificación no válido",
+  "@invalidVerificationToken": {
+    "description": "Invalid Verification Token",
+    "type": "text",
+    "placeholders": {}
+  }
+}

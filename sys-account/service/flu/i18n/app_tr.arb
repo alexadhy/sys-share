@@ -1,0 +1,99 @@
+{
+  "@@last_modified": "2021-01-24T23:30:39.478538",
+  "email": "E-posta adresi",
+  "@email": {
+    "description": "Email",
+    "type": "text",
+    "placeholders": {}
+  },
+  "emailHint": "E-posta adresiniz",
+  "@emailHint": {
+    "description": "Your Email",
+    "type": "text",
+    "placeholders": {}
+  },
+  "password": "Parola",
+  "@password": {
+    "description": "Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordHint": "Şifreniz",
+  "@passwordHint": {
+    "description": "Your Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "verificationToken": "Doğrulama Jetonu",
+  "@verificationToken": {
+    "description": "Verification Token",
+    "type": "text",
+    "placeholders": {}
+  },
+  "verifyAccount": "Hesabı Doğrula",
+  "@verifyAccount": {
+    "description": "Verifiy Account",
+    "type": "text",
+    "placeholders": {}
+  },
+  "submitNewPassword": "Yeni Şifre Gönder",
+  "@submitNewPassword": {
+    "description": "Submit New Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "byProceeding": "Devam ederek Kullanım Koşullarımızı kabul ediyor ve Gizlilik Politikamızı okuduğunuzu onaylıyorsunuz.",
+  "@byProceeding": {
+    "description": "By Proceeding",
+    "type": "text",
+    "placeholders": {}
+  },
+  "signUp": "Kaydol",
+  "@signUp": {
+    "description": "Sign Up",
+    "type": "text",
+    "placeholders": {}
+  },
+  "signIn": "Oturum aç",
+  "@signIn": {
+    "description": "Sign In",
+    "type": "text",
+    "placeholders": {}
+  },
+  "signOut": "Oturumu Kapat",
+  "@signOut": {
+    "description": "Sign Out",
+    "type": "text",
+    "placeholders": {}
+  },
+  "forgotPassword": "Parolanızı mı unuttunuz",
+  "@forgotPassword": {
+    "description": "Forgot Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "resetPassword": "Şifreyi yenile",
+  "@resetPassword": {
+    "description": "Reset Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "invalidEmail": "Geçersiz e-posta",
+  "@invalidEmail": {
+    "description": "Invalid Email",
+    "type": "text",
+    "placeholders": {}
+  },
+  "invalidPassword": "geçersiz şifre",
+  "@invalidPassword": {
+    "description": "Invalid Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "invalidVerificationToken": "Geçersiz Doğrulama Jetonu",
+  "@invalidVerificationToken": {
+    "description": "Invalid Verification Token",
+    "type": "text",
+    "placeholders": {}
+  }
+}

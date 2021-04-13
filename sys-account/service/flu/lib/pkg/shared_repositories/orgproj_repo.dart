@@ -17,6 +17,7 @@ class OrgProjRepo {
     Map<String, dynamic> filters,
     bool isDescending = false,
     String matcher = 'like',
+    bool subscribedOnly = false,
   }) async {
     final ppe = Int64(perPageEntries);
     final req = rpc.ListRequest()
@@ -24,6 +25,7 @@ class OrgProjRepo {
       ..currentPageId = currentPageId.toString()
       ..orderBy = orderBy
       ..matcher = matcher
+      ..subscribedOnly = subscribedOnly
       ..isDescending = isDescending;
 
     if (filters != null) {
@@ -36,40 +38,6 @@ class OrgProjRepo {
       final client = await orgProjectServiceClient();
       final resp = await client
           .listOrg(req, options: await getCallOptions())
-          .then((res) {
-        return res;
-      });
-      return resp;
-    } catch (e) {
-      throw e;
-    }
-  }
-
-  static Future<rpc.ListResponse> listNonSubbedOrgs(
-      {@required String accountId,
-      Int64 currentPageId = Int64.ZERO,
-      String orderBy,
-      int perPageEntries = 10,
-      Map<String, dynamic> filters,
-      bool isDescending = false}) async {
-    final ppe = Int64(perPageEntries);
-    final req = rpc.ListRequest()
-      ..perPageEntries = ppe
-      ..currentPageId = currentPageId.toString()
-      ..orderBy = orderBy
-      ..isDescending = isDescending
-      ..accountId = accountId;
-
-    if (filters != null) {
-      final jstring = jsonEncode(filters);
-      final jbytes = utf8.encode(jstring);
-      req..filters = jbytes;
-    }
-
-    try {
-      final client = await orgProjectServiceClient();
-      final resp = await client
-          .listNonSubscribedOrgs(req, options: await getCallOptions())
           .then((res) {
         return res;
       });

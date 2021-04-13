@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: sys_account_services.proto
 //
-// @dart = 2.3
+// @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
@@ -57,76 +57,54 @@ class AccountServiceClient extends $grpc.Client {
           ($0.DisableAccountRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
-  AccountServiceClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  AccountServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$0.Account> newAccount($0.AccountNewRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$newAccount, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$newAccount, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Account> getAccount($0.IdRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getAccount, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAccount, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.ListAccountsResponse> listAccounts(
       $0.ListAccountsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listAccounts, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listAccounts, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.SearchAccountsResponse> searchAccounts(
       $0.SearchAccountsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$searchAccounts, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$searchAccounts, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Account> assignAccountToRole(
       $0.AssignAccountToRoleRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$assignAccountToRole, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$assignAccountToRole, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Account> updateAccount(
       $0.AccountUpdateRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$updateAccount, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateAccount, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Account> disableAccount(
       $0.DisableAccountRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$disableAccount, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$disableAccount, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Empty> deleteAccount($0.DisableAccountRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteAccount, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteAccount, request, options: options);
   }
 }
 
@@ -295,11 +273,6 @@ class OrgProjServiceClient extends $grpc.Client {
       '/v2.sys_account.services.OrgProjService/ListOrg',
       ($0.ListRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.ListResponse.fromBuffer(value));
-  static final _$listNonSubscribedOrgs =
-      $grpc.ClientMethod<$0.ListRequest, $0.ListResponse>(
-          '/v2.sys_account.services.OrgProjService/ListNonSubscribedOrgs',
-          ($0.ListRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $0.ListResponse.fromBuffer(value));
   static final _$updateOrg = $grpc.ClientMethod<$0.OrgUpdateRequest, $0.Org>(
       '/v2.sys_account.services.OrgProjService/UpdateOrg',
       ($0.OrgUpdateRequest value) => value.writeToBuffer(),
@@ -309,92 +282,60 @@ class OrgProjServiceClient extends $grpc.Client {
       ($0.IdRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
-  OrgProjServiceClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  OrgProjServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$0.Project> newProject($0.ProjectRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$newProject, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$newProject, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Project> getProject($0.IdRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getProject, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getProject, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.ListResponse> listProject($0.ListRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listProject, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listProject, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Project> updateProject(
       $0.ProjectUpdateRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$updateProject, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateProject, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Empty> deleteProject($0.IdRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteProject, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteProject, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Org> newOrg($0.OrgRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$newOrg, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$newOrg, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Org> getOrg($0.IdRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$getOrg, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getOrg, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.ListResponse> listOrg($0.ListRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$listOrg, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
-  }
-
-  $grpc.ResponseFuture<$0.ListResponse> listNonSubscribedOrgs(
-      $0.ListRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listNonSubscribedOrgs, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listOrg, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Org> updateOrg($0.OrgUpdateRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$updateOrg, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateOrg, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Empty> deleteOrg($0.IdRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$deleteOrg, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteOrg, request, options: options);
   }
 }
 
@@ -459,13 +400,6 @@ abstract class OrgProjServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.ListRequest.fromBuffer(value),
         ($0.ListResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.ListRequest, $0.ListResponse>(
-        'ListNonSubscribedOrgs',
-        listNonSubscribedOrgs_Pre,
-        false,
-        false,
-        ($core.List<$core.int> value) => $0.ListRequest.fromBuffer(value),
-        ($0.ListResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.OrgUpdateRequest, $0.Org>(
         'UpdateOrg',
         updateOrg_Pre,
@@ -522,11 +456,6 @@ abstract class OrgProjServiceBase extends $grpc.Service {
     return listOrg(call, await request);
   }
 
-  $async.Future<$0.ListResponse> listNonSubscribedOrgs_Pre(
-      $grpc.ServiceCall call, $async.Future<$0.ListRequest> request) async {
-    return listNonSubscribedOrgs(call, await request);
-  }
-
   $async.Future<$0.Org> updateOrg_Pre($grpc.ServiceCall call,
       $async.Future<$0.OrgUpdateRequest> request) async {
     return updateOrg(call, await request);
@@ -550,8 +479,6 @@ abstract class OrgProjServiceBase extends $grpc.Service {
   $async.Future<$0.Org> newOrg($grpc.ServiceCall call, $0.OrgRequest request);
   $async.Future<$0.Org> getOrg($grpc.ServiceCall call, $0.IdRequest request);
   $async.Future<$0.ListResponse> listOrg(
-      $grpc.ServiceCall call, $0.ListRequest request);
-  $async.Future<$0.ListResponse> listNonSubscribedOrgs(
       $grpc.ServiceCall call, $0.ListRequest request);
   $async.Future<$0.Org> updateOrg(
       $grpc.ServiceCall call, $0.OrgUpdateRequest request);
@@ -594,56 +521,42 @@ class AuthServiceClient extends $grpc.Client {
           ($0.VerifyAccountRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
-  AuthServiceClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  AuthServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$0.RegisterResponse> register($0.RegisterRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$register, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$register, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.LoginResponse> login($0.LoginRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$login, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$login, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.ForgotPasswordResponse> forgotPassword(
       $0.ForgotPasswordRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$forgotPassword, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$forgotPassword, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.ResetPasswordResponse> resetPassword(
       $0.ResetPasswordRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$resetPassword, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$resetPassword, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.RefreshAccessTokenResponse> refreshAccessToken(
       $0.RefreshAccessTokenRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$refreshAccessToken, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$refreshAccessToken, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Empty> verifyAccount($0.VerifyAccountRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$verifyAccount, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$verifyAccount, request, options: options);
   }
 }
 

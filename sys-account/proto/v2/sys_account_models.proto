@@ -39,7 +39,7 @@ message RegisterRequest {
   string email = 1;
   string password = 2;
   string password_confirm = 3;
-//  UserRoles user_role = 4;
+  //  UserRoles user_role = 4;
 }
 
 message LoginRequest {
@@ -192,6 +192,7 @@ message ListRequest {
   bytes filters = 5;
   string account_id = 6;
   string matcher = 7;
+  bool subscribed_only = 8;
 }
 
 message ListResponse {

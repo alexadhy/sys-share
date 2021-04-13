@@ -1,0 +1,99 @@
+{
+  "@@last_modified": "2021-01-24T23:30:39.478538",
+  "email": "ای میل",
+  "@email": {
+    "description": "Email",
+    "type": "text",
+    "placeholders": {}
+  },
+  "emailHint": "آپ کا ای میل",
+  "@emailHint": {
+    "description": "Your Email",
+    "type": "text",
+    "placeholders": {}
+  },
+  "password": "پاس ورڈ",
+  "@password": {
+    "description": "Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordHint": "آپ کا پاس ورڈ",
+  "@passwordHint": {
+    "description": "Your Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "verificationToken": "توثیق ٹوکن",
+  "@verificationToken": {
+    "description": "Verification Token",
+    "type": "text",
+    "placeholders": {}
+  },
+  "verifyAccount": "اکاؤنٹ کی تصدیق کریں",
+  "@verifyAccount": {
+    "description": "Verifiy Account",
+    "type": "text",
+    "placeholders": {}
+  },
+  "submitNewPassword": "نیا پاس ورڈ جمع کروائیں",
+  "@submitNewPassword": {
+    "description": "Submit New Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "byProceeding": "آگے بڑھنے سے ، آپ ہماری استعمال کی شرائط سے اتفاق کرتے ہیں اور تصدیق کرتے ہیں کہ آپ نے ہماری پرائیویسی پالیسی پڑھی ہے۔",
+  "@byProceeding": {
+    "description": "By Proceeding",
+    "type": "text",
+    "placeholders": {}
+  },
+  "signUp": "سائن اپ",
+  "@signUp": {
+    "description": "Sign Up",
+    "type": "text",
+    "placeholders": {}
+  },
+  "signIn": "سائن ان",
+  "@signIn": {
+    "description": "Sign In",
+    "type": "text",
+    "placeholders": {}
+  },
+  "signOut": "باہر جائیں",
+  "@signOut": {
+    "description": "Sign Out",
+    "type": "text",
+    "placeholders": {}
+  },
+  "forgotPassword": "پاسورڈ بھول گے",
+  "@forgotPassword": {
+    "description": "Forgot Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "resetPassword": "پاس ورڈ ری سیٹ",
+  "@resetPassword": {
+    "description": "Reset Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "invalidEmail": "غلط ای میل",
+  "@invalidEmail": {
+    "description": "Invalid Email",
+    "type": "text",
+    "placeholders": {}
+  },
+  "invalidPassword": "غلط پاسورڈ",
+  "@invalidPassword": {
+    "description": "Invalid Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "invalidVerificationToken": "غلط توثیق ٹوکن",
+  "@invalidVerificationToken": {
+    "description": "Invalid Verification Token",
+    "type": "text",
+    "placeholders": {}
+  }
+}

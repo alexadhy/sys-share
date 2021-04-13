@@ -367,7 +367,6 @@ type OrgProjServiceClient interface {
 	NewOrg(ctx context.Context, in *OrgRequest, opts ...grpc.CallOption) (*Org, error)
 	GetOrg(ctx context.Context, in *IdRequest, opts ...grpc.CallOption) (*Org, error)
 	ListOrg(ctx context.Context, in *ListRequest, opts ...grpc.CallOption) (*ListResponse, error)
-	ListNonSubscribedOrgs(ctx context.Context, in *ListRequest, opts ...grpc.CallOption) (*ListResponse, error)
 	UpdateOrg(ctx context.Context, in *OrgUpdateRequest, opts ...grpc.CallOption) (*Org, error)
 	DeleteOrg(ctx context.Context, in *IdRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 }
@@ -452,15 +451,6 @@ func (c *orgProjServiceClient) ListOrg(ctx context.Context, in *ListRequest, opt
 	return out, nil
 }
 
-func (c *orgProjServiceClient) ListNonSubscribedOrgs(ctx context.Context, in *ListRequest, opts ...grpc.CallOption) (*ListResponse, error) {
-	out := new(ListResponse)
-	err := c.cc.Invoke(ctx, "/v2.sys_account.services.OrgProjService/ListNonSubscribedOrgs", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *orgProjServiceClient) UpdateOrg(ctx context.Context, in *OrgUpdateRequest, opts ...grpc.CallOption) (*Org, error) {
 	out := new(Org)
 	err := c.cc.Invoke(ctx, "/v2.sys_account.services.OrgProjService/UpdateOrg", in, out, opts...)
@@ -493,7 +483,6 @@ type OrgProjServiceServer interface {
 	NewOrg(context.Context, *OrgRequest) (*Org, error)
 	GetOrg(context.Context, *IdRequest) (*Org, error)
 	ListOrg(context.Context, *ListRequest) (*ListResponse, error)
-	ListNonSubscribedOrgs(context.Context, *ListRequest) (*ListResponse, error)
 	UpdateOrg(context.Context, *OrgUpdateRequest) (*Org, error)
 	DeleteOrg(context.Context, *IdRequest) (*emptypb.Empty, error)
 	mustEmbedUnimplementedOrgProjServiceServer()
@@ -526,9 +515,6 @@ func (UnimplementedOrgProjServiceServer) GetOrg(context.Context, *IdRequest) (*O
 }
 func (UnimplementedOrgProjServiceServer) ListOrg(context.Context, *ListRequest) (*ListResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ListOrg not implemented")
-}
-func (UnimplementedOrgProjServiceServer) ListNonSubscribedOrgs(context.Context, *ListRequest) (*ListResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ListNonSubscribedOrgs not implemented")
 }
 func (UnimplementedOrgProjServiceServer) UpdateOrg(context.Context, *OrgUpdateRequest) (*Org, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateOrg not implemented")
@@ -693,24 +679,6 @@ func _OrgProjService_ListOrg_Handler(srv interface{}, ctx context.Context, dec f
 	return interceptor(ctx, in, info, handler)
 }
 
-func _OrgProjService_ListNonSubscribedOrgs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ListRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(OrgProjServiceServer).ListNonSubscribedOrgs(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/v2.sys_account.services.OrgProjService/ListNonSubscribedOrgs",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(OrgProjServiceServer).ListNonSubscribedOrgs(ctx, req.(*ListRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _OrgProjService_UpdateOrg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(OrgUpdateRequest)
 	if err := dec(in); err != nil {
@@ -785,10 +753,6 @@ var OrgProjService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ListOrg",
 			Handler:    _OrgProjService_ListOrg_Handler,
-		},
-		{
-			MethodName: "ListNonSubscribedOrgs",
-			Handler:    _OrgProjService_ListNonSubscribedOrgs_Handler,
 		},
 		{
 			MethodName: "UpdateOrg",
